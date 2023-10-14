@@ -1,0 +1,7 @@
+/.terraform
+/.terraform.lock.hcl
+/my_key.pem
+/terraform.auto.tfvars
+/terraform.exe
+/terraform.tfstate
+/terraform.tfstate.backup
