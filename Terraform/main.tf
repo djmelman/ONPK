@@ -145,9 +145,12 @@ resource "openstack_compute_instance_v2" "private_server" {
   }
 
   network {
-    name = var.username
+    name = "stud10"
   }
-
+  network {
+    name = "ext-net-154"
+  }
+  user_data = "${file("test.sh")}"
 }
 
 /*resource "openstack_compute_interface_attach_v2" "ai_1" {
