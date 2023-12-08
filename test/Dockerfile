@@ -1,7 +1,7 @@
 # Multi-stage build Dockerfile
 
 # app build stage
-FROM docker.io/golang:1.16.7-alpine3.14 as builder
+FROM golang:alpine as builder
 RUN mkdir /build
 ADD . /build/
 WORKDIR /build
