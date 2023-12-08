@@ -11,7 +11,7 @@ COPY . /app
 RUN yarn build
 
 # image build stage
-FROM nginx:stable-alpine
+FROM docker.io/nginx:stable-alpine
 COPY --from=build /app/build /usr/share/nginx/html
 COPY --from=build /app/env.sh /docker-entrypoint.d
 RUN chmod +x /docker-entrypoint.d/env.sh
