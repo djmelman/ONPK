@@ -1,7 +1,7 @@
 # Multi-stage build docker file
 
 # app build stage
-FROM node:12-alpine as build
+FROM docker.io/node:12-alpine as build
 WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
 COPY ./package.json /app/
