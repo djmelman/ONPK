@@ -15,9 +15,9 @@ spec:
     - name: image-reference
       value: tomastaptik/frontend_tekton:1.0
     - name: dockerfile
-      value: frontend/Dockerfile
+      value: DockerFiles/frontend/Dockerfile
     - name: context
-      value: frontend
+      value: DockerFiles/frontend
   workspaces:
     - name: shared-data
       volumeClaimTemplate:

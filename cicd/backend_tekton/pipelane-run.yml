@@ -1,7 +1,7 @@
 apiVersion: tekton.dev/v1beta1
 kind: PipelineRun
 metadata:
-  generateName: clone-build-push-run-
+  generateName: backend-clone-build-push-run
 spec:
   serviceAccountName: pipeline-sa
   pipelineRef:
@@ -15,9 +15,9 @@ spec:
     - name: image-reference
       value: tomastaptik/backend_tekton:1.0
     - name: dockerfile
-      value: backend/Dockerfile
+      value: DockerFiles/backend/Dockerfile
     - name: context
-      value: backend
+      value: DockerFiles/backend
   workspaces:
     - name: shared-data
       volumeClaimTemplate:
