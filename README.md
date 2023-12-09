@@ -31,20 +31,21 @@ CMD [ "nginx", "-g", "daemon off;" ]
 ### Build a Push
 
 Prihlásime sa do docker hubu:
-
-docker login
-```
+ ```
+ docker login
+ ```
 V zložkách pre backend aj frontend najprv buildneme image príkazom docker:
-
-build -t <názov>:<tag> .
-```
+ ```
+ build -t <názov>:<tag> .
+ ```
 Následne otagujeme image:
-docker tag <názov>:<tag> tomastaptik/<názov>:<tag>
-```
+ ```
+ docker tag <názov>:<tag> tomastaptik/<názov>:<tag>
+ ```
 Pushneme ho do repozitára:
-
-docker push tomastaptik/<názov>:<tag>
-```
+ ```
+ docker push tomastaptik/<názov>:<tag>
+ ```
 ## Zadanie 3: Helm
 
 ## Zadanie 4: CI/CD
