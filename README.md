@@ -54,6 +54,8 @@ Pushneme ho do repozitára:
  ```
 ## Zadanie 3: Helm
 
+Súbory pre Helm zadanie sú v zložke Helm.
+
 ## Zadanie 4: CI/CD
 
 Súbory pre CI/CD zadanie sú v zložke cicd.
