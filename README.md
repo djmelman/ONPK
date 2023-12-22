@@ -15,18 +15,24 @@ Inštalácia Docker a následný pull zadaných repozitárov v zadaní.
 #### Backend
 
 Do DockerFile boli pridané nasledujúce príkazy.
-
+```
 COPY --from=builder /build/main /app/  
-WORKDIR /app                           
+```
+```
+WORKDIR /app    
+```
+```                       
 CMD ["./main"]
-
+```
 #### Frontend
 
 Do DockerFile boli pridané nasledujúce príkazy.
-
-RUN echo ' Container exposing 8080.'
+```
+EXPOSE 8080
+```
+```
 CMD [ "nginx", "-g", "daemon off;" ]
-
+```
 
 ### Build a Push
 

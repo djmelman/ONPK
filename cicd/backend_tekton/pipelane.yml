@@ -53,3 +53,21 @@ spec:
           workspace: shared-data
         - name: dockerconfig
           workspace: docker-credentials
+    - name: helm-upgrade-from-source
+      runAfter: ["build-push"]
+      taskRef:
+        name: helm-upgrade-from-source
+      workspaces:
+        - name: source
+          workspace: shared-data
+      params:
+        - name: charts_dir
+          value: Helm/frontend
+        - name: release_version
+          value: v1.0.0
+        - name: release_name
+          value: helm-source-sample
+        - name: overwrite_values
+          value: "autoscaling.enabled=true,autoscaling.maxReplicas=3"
+        - name: upgrade_extra_params
+          value: "--force"
