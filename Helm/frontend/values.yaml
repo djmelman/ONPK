@@ -1,0 +1,13 @@
+frontend:
+    name: frontend
+image:
+  repository: tomastaptik/frontend
+  tag: 3.0
+
+service:
+  name: frontend-service
+  port: 80
+
+replicaCount: 1
+env:
+  name: REACT_APP_APIHOSTPORT

@@ -1,0 +1,14 @@
+image:
+  repository: tomastaptik/backend
+  tag: 1.0
+
+service:
+  name: backend-service
+  port: 80
+
+replicaCount: 1
+
+mongo:
+  enabled: true
+  mongoHost: mongodb
+  mongoPort: 27017
