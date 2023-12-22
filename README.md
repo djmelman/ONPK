@@ -1,6 +1,7 @@
 # Dokumentácia ONPK
 Autor: Bc. Tomáš Ťaptík
-DockerHub: https://github.com/djmelman/ONPK
+
+DockerHub: https://hub.docker.com/u/tomastaptik
 
 ## Zadanie 1: Terraform
 
